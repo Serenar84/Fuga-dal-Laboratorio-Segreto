@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Room – Stanza 1</title>
+  <style>
+    body { background-color: #111; color: #fff; font-family: Arial; text-align: center; padding: 50px; }
+    a { color: #0f0; text-decoration: none; display: block; margin-top: 20px; }
+    input { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🔒 Stanza 1: Il Laboratorio</h1>
+  <p>Ti risvegli in un laboratorio buio. Sul muro c’è scritto:  
+  <em>“Solo chi conosce l’elemento numero 8 potrà aprire la porta.”</em></p>
+
+  <input id="answer" placeholder="Scrivi la risposta">
+  <button onclick="check()">Apri la porta</button>
+
+  <script>
+    function check() {
+      const ans = document.getElementById("answer").value.toLowerCase();
+      if (ans === "ossigeno") {
+        window.location.href = "room2.html";
+      } else {
+        alert("Risposta sbagliata! Riprova...");
+      }
+    }
+  </script>
+</body>
+</html>
