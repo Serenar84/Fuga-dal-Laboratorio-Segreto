@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Room – Stanza 2</title>
+  <style>
+    body { background-color: #001; color: #fff; font-family: Arial; text-align: center; padding: 50px; }
+    input { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🧬 Stanza 2: Il Codice Segreto</h1>
+  <p>Un computer mostra una sequenza: 2, 4, 8, 16, ?  
+  <br>Scrivi il numero corretto per continuare.</p>
+
+  <input id="answer" placeholder="Risposta">
+  <button onclick="check()">Invia</button>
+
+  <script>
+    function check() {
+      const ans = document.getElementById("answer").value;
+      if (ans === "32") {
+        window.location.href = "final.html";
+      } else {
+        alert("Errore! Pensa meglio...");
+      }
+    }
+  </script>
+</body>
+</html>
