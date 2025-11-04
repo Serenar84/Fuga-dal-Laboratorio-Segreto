@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Escape Room – Finale</title>
+  <style>
+    body { background-color: #020; color: #0f0; font-family: Arial; text-align: center; padding: 50px; }
+    input { padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🚪 Stanza Finale: La Porta d’Uscita</h1>
+  <p>Sul muro leggi:  
+  <em>“Unisci le prime lettere delle risposte precedenti e scoprirai la parola magica.”</em></p>
+
+  <input id="answer" placeholder="Password finale">
+  <button onclick="check()">Apri la porta</button>
+
+  <script>
+    function check() {
+      const ans = document.getElementById("answer").value.toLowerCase();
+      if (ans === "o3" || ans === "o") { // nel nostro caso O per "Ossigeno" e "32"
+        document.body.innerHTML = "<h1>🎉 Complimenti! Sei fuggito dal laboratorio! 🎉</h1>";
+      } else {
+        alert("Non è la password corretta!");
+      }
+    }
+  </script>
+</body>
+</html>
